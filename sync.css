@@ -1,0 +1,506 @@
+body{
+	background: #000;
+	display: flex;
+}
+
+.context-1, .context-3 {
+	height: 306px;
+	width: 306px;
+	border-radius: 153px;
+	margin: 200px auto;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	/* background-color: #fff; */
+}
+
+.context-2 {
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	/* background-color: #fff; */
+}
+
+.sphere {
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	background-color: orange;
+	position: absolute;
+	top: 42%;
+	right: 43%;
+}
+
+.sphere  .sphere {
+	height: 6px;
+	width: 6px;
+	border-radius: 3px;
+	background-color: yellow;
+	position: absolute;
+	top: 42%;
+	right: 43%;
+}
+
+/* .position-1, .position-6 {
+	-ms-transform: rotate(90deg); 
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+}
+
+.position-2, .position-7 {
+	-ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    transform: rotate(45deg);
+}
+
+.position-4, .position-7 {
+	-ms-transform: rotate(-45deg); 
+    -webkit-transform: rotate(-45deg); 
+    transform: rotate(-45deg);
+} */
+
+.sphere {
+	transition-timing-function: ease-in-out;
+}
+
+.sphere.position-1 {
+	animation: swirl-1 3s infinite;
+	animation-delay: 0s;
+}
+.sphere.position-2 {
+	animation: swirl-2 3s infinite;
+	animation-delay: 0.375s;
+}
+.sphere.position-3 {
+	animation: swirl-3 3s infinite;
+	animation-delay: 0.75s;
+}
+.sphere.position-4 {
+	animation: swirl-4 3s infinite;
+	animation-delay: 1.125s;
+}
+.sphere.position-5 {
+	animation: swirl-5 3s infinite;
+	animation-delay: 1.5s;
+}
+.sphere.position-6 {
+	animation: swirl-6 3s infinite;
+	animation-delay: 1.875s;
+}
+.sphere.position-7 {
+	animation: swirl-7 3s infinite;
+	animation-delay: 2.25s;
+}
+.sphere.position-8 {
+	animation: swirl-8 3s infinite;
+	animation-delay: 2.625s;
+}
+
+.context-3 .sphere.position-1 {
+	animation: rolling-1 3s infinite;
+	animation-delay: 0s;
+}
+.context-3 .sphere.position-2 {
+	animation: rolling-2 3s infinite;
+	animation-delay: 0.375s;
+}
+.context-3 .sphere.position-3 {
+	animation: rolling-3 3s infinite;
+	animation-delay: 0.75s;
+}
+.context-3 .sphere.position-4 {
+	animation: rolling-4 3s infinite;
+	animation-delay: 1.125s;
+}
+.context-3 .sphere.position-5 {
+	animation: rolling-5 3s infinite;
+	animation-delay: 1.5s;
+}
+.context-3 .sphere.position-6 {
+	animation: rolling-6 3s infinite;
+	animation-delay: 1.875s;
+}
+.context-3 .sphere.position-7 {
+	animation: rolling-7 3s infinite;
+	animation-delay: 2.25s;
+}
+.context-3 .sphere.position-8 {
+	animation: rolling-8 3s infinite;
+	animation-delay: 2.625s;
+}
+
+/* .sphere .sphere.position-1 {
+	animation: mini-swirl-1 1.5s infinite;
+	animation-delay: 0s;
+}
+.sphere .sphere.position-2 {
+	animation: mini-swirl-2 1.5s infinite;
+	animation-delay: 0.375s;
+}
+.sphere .sphere.position-3 {
+	animation: mini-swirl-3 1.5s infinite;
+	animation-delay: 0.75s;
+}
+.sphere .sphere.position-4 {
+	animation: mini-swirl-4 1.5s infinite;
+	animation-delay: 1.125s;
+}
+.sphere .sphere.position-5 {
+	animation: mini-swirl-5 1.5s infinite;
+	animation-delay: 1.5s;
+}
+.sphere .sphere.position-6 {
+	animation: mini-swirl-6 1.5s infinite;
+	animation-delay: 1.875s;
+}
+.sphere .sphere.position-7 {
+	animation: mini-swirl-7 1.5s infinite;
+	animation-delay: 2.25s;
+}
+.sphere .sphere.position-8 {
+	animation: mini-swirl-8 1.5s infinite;
+	animation-delay: 2.625s;
+} */
+
+.sphere .sphere.position-1 {
+	animation: mini-swirl-1 1.5s infinite;
+	animation-delay: 0s;
+}
+.sphere .sphere.position-2 {
+	animation: mini-swirl-2 1.5s infinite;
+	animation-delay: 0.1875s;
+}
+.sphere .sphere.position-3 {
+	animation: mini-swirl-3 1.5s infinite;
+	animation-delay: 0.375s;
+}
+.sphere .sphere.position-4 {
+	animation: mini-swirl-4 1.5s infinite;
+	animation-delay: 0.5625s;
+}
+.sphere .sphere.position-5 {
+	animation: mini-swirl-5 1.5s infinite;
+	animation-delay: 0.75s;
+}
+.sphere .sphere.position-6 {
+	animation: mini-swirl-6 1.5s infinite;
+	animation-delay: 0.9375s;
+}
+.sphere .sphere.position-7 {
+	animation: mini-swirl-7 1.5s infinite;
+	animation-delay: 1.125s;
+}
+.sphere .sphere.position-8 {
+	animation: mini-swirl-8 1.5s infinite;
+	animation-delay: 1.3125s;
+}
+
+
+
+/*animation keyframes*/
+
+/*Swirl*/
+
+@keyframes swirl-1 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(0px, 125px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+@keyframes swirl-2 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(92px, 92px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+@keyframes swirl-3 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(125px, 0px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+@keyframes swirl-4 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(92px, -92px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+@keyframes swirl-5 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(0px, -125px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+@keyframes swirl-6 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(-92px, -92px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+@keyframes swirl-7 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(-125px, 0px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+@keyframes swirl-8 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(-92px, 92px);
+	background-color: red;
+	opacity: 1;
+  }
+}
+
+/*Roll*/
+
+@keyframes rolling-1 {
+  0%, 100% {
+    transform: translate(0px, 62px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(0px, 125px);
+	background-color: red;
+  }
+}
+
+@keyframes rolling-2 {
+  0%, 100% {
+    transform: translate(46px, 46px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(92px, 92px);
+	background-color: red;
+  }
+}
+
+@keyframes rolling-3 {
+  0%, 100% {
+    transform: translate(62px, 0px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(125px, 0px);
+	background-color: red;
+  }
+}
+
+@keyframes rolling-4 {
+  0%, 100% {
+    transform: translate(46px, -46px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(92px, -92px);
+	background-color: red;
+  }
+}
+
+@keyframes rolling-5 {
+  0%, 100% {
+    transform: translate(0px, -62px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(0px, -125px);
+	background-color: red;
+  }
+}
+
+@keyframes rolling-6 {
+  0%, 100% {
+    transform: translate(-46px, -46px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(-92px, -92px);
+	background-color: red;
+  }
+}
+
+@keyframes rolling-7 {
+  0%, 100% {
+    transform: translate(-62px, 0px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(-125px, 0px);
+	background-color: red;
+  }
+}
+
+@keyframes rolling-8 {
+  0%, 100% {
+    transform: translate(-46px, 46px);
+	background-color: orange;
+  }
+  50% {
+    transform: translate(-92px, 92px);
+	background-color: red;
+  }
+}
+
+/*Mini-swirl*/
+
+@keyframes mini-swirl-1 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(0px, 22px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
+
+@keyframes mini-swirl-2 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(15px, 15px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
+
+@keyframes mini-swirl-3 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(22px, 0px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
+
+@keyframes mini-swirl-4 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(15px, -15px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
+
+@keyframes mini-swirl-5 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(0px, -22px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
+
+@keyframes mini-swirl-6 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(-15px, -15px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
+
+@keyframes mini-swirl-7 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(-22px, 0px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
+
+@keyframes mini-swirl-8 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+	background-color: orange;
+	opacity: 0;
+  }
+  50% {
+    transform: translate(-15px, 15px);
+	background-color: yellow;
+	opacity: 1;
+  }
+}
